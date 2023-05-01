@@ -31,11 +31,11 @@ public class Question5
     
      List <Integer> num_list = new ArrayList<>();
     Scanner in = new Scanner(System.in);
-    System.out.println("Please enter the number of times you would like to enter a number:");
+    //System.out.println("Please enter the number of times you would like to enter a number:");
     int times = in.nextInt();
     for(int i = 1; i<= times; i++)
     {
-      System.out.println("Please enter a number:");
+      //System.out.println("Please enter a number:");
       int num_entered = in.nextInt();
       num_list.add(num_entered);
     }
@@ -49,14 +49,14 @@ public class Question5
       {
         if(each_num == num_list.get(a))
         {
-          
           count ++;
         }
       }
       if (count > maxCount)
         maxCount = count;
         mode = each_num;
-        System.out.println("The mode is " + mode);
+        
     }
+    //System.out.println("The mode is " + mode);
   }
 }
