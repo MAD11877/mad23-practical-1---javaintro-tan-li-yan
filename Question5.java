@@ -57,6 +57,6 @@ public class Question5
         mode = each_num;
         
     }
-    //System.out.println("The mode is " + mode);
+    System.out.println(mode);
   }
 }
