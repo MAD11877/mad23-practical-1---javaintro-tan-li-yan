@@ -11,6 +11,14 @@ public class Question2
      */
      
     Scanner in = new Scanner(System.in);
+    System.out.println("Enter height in (m):");
     double height = in.nextDouble();
+    System.out.println("Enter weight:");
+    double weight = in.nextDouble();
+    
+    //Calculate the bmi
+    double bmi = weight/ (Math.pow(height,2));
+    System.out.println("Your BMI is:" + bmi);
+
   }
 }

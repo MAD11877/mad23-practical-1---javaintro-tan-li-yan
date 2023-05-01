@@ -1,4 +1,7 @@
 import java.util.Scanner;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 public class Question5
 {
@@ -25,8 +28,35 @@ public class Question5
      *     2
      * Hint: Use a loop to get input. Use another 2 loops to find the mode
      */
-     
-    Scanner in = new Scanner(System.in);
     
+     List <Integer> num_list = new ArrayList<>();
+    Scanner in = new Scanner(System.in);
+    System.out.println("Please enter the number of times you would like to enter a number:");
+    int times = in.nextInt();
+    for(int i = 1; i<= times; i++)
+    {
+      System.out.println("Please enter a number:");
+      int num_entered = in.nextInt();
+      num_list.add(num_entered);
+    }
+    int count = 0;
+    int maxCount = 0;
+    int mode = 0;
+    for(int j = 0; j<num_list.size(); j++)
+    {
+      int each_num = num_list.get(j);
+      for(int a = 0; a < num_list.size(); a ++)
+      {
+        if(each_num == num_list.get(a))
+        {
+          
+          count ++;
+        }
+      }
+      if (count > maxCount)
+        maxCount = count;
+        mode = each_num;
+        System.out.println("The mode is " + mode);
+    }
   }
 }
